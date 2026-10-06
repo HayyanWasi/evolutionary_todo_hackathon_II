@@ -1,0 +1,22 @@
+[project]
+name = "todo-spec-driven-dev"
+version = "0.1.0"
+description = "In-memory console todo app (Phase I)"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+todo = "todo.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.9.4,<0.10.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "todo"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
